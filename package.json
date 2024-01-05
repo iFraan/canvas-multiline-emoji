@@ -1,0 +1,38 @@
+{
+  "name": "canvas-multiline-emojies",
+  "version": "1.0.0",
+  "description": "Reduces font-size and auto create new lines based on rect-size.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "ts-node test.ts",
+    "build": "tsup",
+    "start": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iFraan/canvas-multiline-emojies.git"
+  },
+  "keywords": [
+    "canvas",
+    "multiline",
+    "twemoji",
+    "emoji",
+    "canvacord"
+  ],
+  "author": "ifraan_",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/iFraan/canvas-multiline-emojies/issues"
+  },
+  "homepage": "https://github.com/iFraan/canvas-multiline-emojies#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
+  }
+}
