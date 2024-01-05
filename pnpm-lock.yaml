@@ -8,6 +8,9 @@ dependencies:
   node-canvas-with-twemoji-and-discord-emoji:
     specifier: ^1.2.1
     version: 1.2.1
+  words-array:
+    specifier: ^1.0.1
+    version: 1.0.1
 
 devDependencies:
   ts-node:
@@ -1607,6 +1610,10 @@ packages:
     resolution: {integrity: sha512-eDMORYaPNZ4sQIuuYPDHdQvf4gyCF9rEEV/yPxGfwPkRodwEgiMUUXTx/dex+Me0wxx53S+NgUHaP7y3MGlDmg==}
     dependencies:
       string-width: 4.2.3
+    dev: false
+
+  /words-array@1.0.1:
+    resolution: {integrity: sha512-hIe554G5rHAIa2HeIPcvl4zzIeS9DCSLjFM6HbqzTEGmyCZVqMffXpxEGZwweT+ZxbkTdNg78YwwzhQsA7jjPw==}
     dev: false
 
   /wrap-ansi@7.0.0:
