@@ -31,8 +31,11 @@
   },
   "homepage": "https://github.com/iFraan/canvas-multiline-emojies#readme",
   "devDependencies": {
-    "ts-node": "^10.9.1",
-    "tsup": "^7.2.0",
-    "typescript": "^5.2.2"
+    "ts-node": "^10.9.2",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "node-canvas-with-twemoji-and-discord-emoji": "^1.2.1"
   }
 }
