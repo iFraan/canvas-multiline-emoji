@@ -1,4 +1,5 @@
 import { fillTextWithTwemoji, strokeTextWithTwemoji } from "node-canvas-with-twemoji-and-discord-emoji";
+import { CanvasRenderingContext2D } from "canvas";
 import wordCounter from 'words-array';
 
 export type Line = {
@@ -23,7 +24,7 @@ export type MultilineOptions = {
     logFunction?: Function,
 };
 
-export const drawText = async (ctx: any, text: string, options: MultilineOptions = {}) => {
+export const drawText = async (ctx: CanvasRenderingContext2D, text: string, options: MultilineOptions = {}) => {
 
     const DEFAULT_OPTIONS = {
         font: 'sans-serif',
