@@ -37,7 +37,7 @@ export const drawText = async (ctx: CanvasRenderingContext2D, text: string, opti
             height: ctx.canvas.height
         },
         lineHeight: 1,
-        minFontSize: 12,
+        minFontSize: 8,
         maxFontSize: 100,
         logFunction: (...content: any[]) => console.log(content),
     };
@@ -83,7 +83,7 @@ export const drawText = async (ctx: CanvasRenderingContext2D, text: string, opti
         inner.push({ text: currentLine, x, y });
 
         /* --- if im at the bottom, thats the max font i can use --- */
-        if (y > parameters.rect.height) {
+        if ((y + (fontSize * parameters.lineHeight)) > parameters.rect.height) {
             lines.push(...inner);
             break;
         }
@@ -104,3 +104,5 @@ export const drawText = async (ctx: CanvasRenderingContext2D, text: string, opti
     return fontSize;
 
 };
+
+export default { drawText };
