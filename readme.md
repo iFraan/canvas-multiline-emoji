@@ -1,5 +1,20 @@
 <div align="center">
     <h1>canvas-multiline-emoji</h1>
+    <a href="https://www.codefactor.io/repository/github/ifraan/canvas-multiline-emoji">
+        <img src="https://www.codefactor.io/repository/github/ifraan/canvas-multiline-emoji/badge" alt="CodeFactor" />
+    </a>
+    <a href="https://www.npmjs.com/package/canvas-multiline-emoji">
+        <img src="https://badgen.net/npm/v/canvas-multiline-emoji?color=blue" alt="NPM-Version"/>
+    </a>
+    <a href="https://www.npmjs.com/package/canvas-multiline-emoji">
+        <img src="https://badgen.net/npm/dt/canvas-multiline-emoji?color=blue" alt="NPM-Downloads"/>
+    </a>
+    <a href="https://github.com/iFraan/canvas-multiline-emoji">
+        <img src="https://badgen.net/github/stars/iFraan/canvas-multiline-emoji?color=yellow" alt="Github Stars"/>
+    </a>
+    <a href="https://github.com/iFraan/canvas-multiline-emoji/issues">
+        <img src="https://badgen.net/github/issues/iFraan/canvas-multiline-emoji?color=green" alt="Issues"/>
+    </a>
     <p>Typesafe multiline text on canvas with emoji support</p>
 </div>
 
