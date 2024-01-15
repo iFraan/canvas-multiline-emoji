@@ -1,6 +1,6 @@
 <div align="center">
-    <h1>canvas-multiline-emojies</h1>
-    <p>Typesafe multiline text on canvas with emojies support</p>
+    <h1>canvas-multiline-emoji</h1>
+    <p>Typesafe multiline text on canvas with emoji support</p>
 </div>
 
 
@@ -9,7 +9,7 @@
 ## Instalattion
 To install use:
 ```shell
-npm i canvas-multiline-emojies
+npm i canvas-multiline-emoji
 ```
 
 > Inspired on: https://gitlab.com/davideblasutto/canvas-multiline-text
