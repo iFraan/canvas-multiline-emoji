@@ -3,9 +3,8 @@
     <p>Typesafe multiline text on canvas with emojies support</p>
 </div>
 
-This library autoshrinks text size to make it fit in the defined rect.
 
-## Dependencies
+> This library autoshrinks text size to make it fit in the defined rect.
 
 ## Instalattion
 To install use:
@@ -13,4 +12,4 @@ To install use:
 npm i canvas-multiline-emojies
 ```
 
-> Based on: https://gitlab.com/davideblasutto/canvas-multiline-text
+> Inspired on: https://gitlab.com/davideblasutto/canvas-multiline-text
