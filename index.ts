@@ -39,7 +39,7 @@ export const drawText = async (ctx: CanvasRenderingContext2D, text: string, opti
         lineHeight: 1,
         minFontSize: 8,
         maxFontSize: 100,
-        logFunction: (...content: any[]) => console.log(content),
+        logFunction: (...content: any[]) => console.log(...content),
     };
 
     const parameters = {

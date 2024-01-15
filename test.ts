@@ -5,6 +5,7 @@ const canvas = new Canvas(512, 512);
 const ctx = canvas.getContext('2d');
 const text = 'The old rusted farm equipment surrounded the house predicting its demise. He uses onomatopoeia as a weapon of mental destruction.';
 const options = {
+    verbose: true,
     rect: {
         x: 25,
         y: 25,
