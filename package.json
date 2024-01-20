@@ -1,6 +1,6 @@
 {
   "name": "canvas-multiline-emoji",
-  "version": "1.0.11",
+  "version": "1.0.2",
   "description": "Reduces font-size and auto create new lines based on rect-size with emoji support.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/iFraan/canvas-multiline-emoji#readme",
   "devDependencies": {
+    "@types/node": "^20.11.5",
     "ts-node": "^10.9.2",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
