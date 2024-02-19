@@ -1,6 +1,6 @@
 {
   "name": "canvas-multiline-emoji",
-  "version": "1.0.2",
+  "version": "1.0.21",
   "description": "Reduces font-size and auto create new lines based on rect-size with emoji support.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
