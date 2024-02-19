@@ -39,27 +39,42 @@ const fontSize = await drawText(canvas2Dcontext, text, options);
 
 ### Example
 ```js
+import fs from 'node:fs';
 import { Canvas } from 'canvas';
 import { drawText } from 'canvas-multiline-emoji';
-const canvas = new Canvas(512, 512);
+
+const canvas = new Canvas(500, 500);
 const ctx = canvas.getContext('2d');
-const text = 'The old rusted farm equipment surrounded the house predicting its demise. He uses onomatopoeia as a weapon of mental destruction.';
+const text = 'The old rusted farm equipment 🤪 surrounded the house predicting its demise. He uses onomatopoeia as a weapon of mental destruction. 👍';
 const options = {
     font: 'OpenSans',
+    verbose: true,
     rect: {
-        x: 25,
-        y: 25,
-        width: canvas.width - 25,
-        height: canvas.height - 25
+        x: 50,
+        y: 50,
+        width: canvas.width - 50,
+        height: canvas.height - 50,
     },
     minFontSize: 10,
     maxFontSize: 40,
     lineHeight: 1.2
 };
 
-const fontSizeUsed = await drawText(ctx, text, options);
+const test = async () => {
+    /* --- background --- */
+    ctx.fillStyle = '#4a4aad';
+    ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    /* --- font color --- */
+    ctx.fillStyle = '#ceceec';
+    
+    const fontSizeUsed = await drawText(ctx, text, options);
+    console.log('Font size used: ', fontSizeUsed);
 
-console.log('Font size used: ', fontSizeUsed)
+    const buffer = canvas.toBuffer();
+    fs.writeFileSync('test.png', buffer);
+};
+
+test();
 ```
 
 #### Options
@@ -77,6 +92,6 @@ The `options` type is defined as `MultilineOptions` and (almost) all its keys ar
 | `logFunction` | Custome function for logging.                                              | `console.log` |
 
 ## Dependencies
-This module require some kind of Canvas object.
+This module requires some kind of Canvas object.
 
 > Inspired on: https://gitlab.com/davideblasutto/canvas-multiline-text
