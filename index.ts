@@ -21,7 +21,7 @@ export type MultilineOptions = {
     lineHeight?: number,
     minFontSize?: number,
     maxFontSize?: number,
-    logFunction?: Function,
+    logFunction?: (...content: unknown[]) => void,
 };
 
 export const drawText = async (ctx: CanvasRenderingContext2D, text: string, options: MultilineOptions = {}) => {
@@ -39,7 +39,7 @@ export const drawText = async (ctx: CanvasRenderingContext2D, text: string, opti
         lineHeight: 1,
         minFontSize: 8,
         maxFontSize: 100,
-        logFunction: (...content: any[]) => console.log(...content),
+        logFunction: (...content: unknown[]) => console.log(...content),
     };
 
     const parameters = {
@@ -59,7 +59,6 @@ export const drawText = async (ctx: CanvasRenderingContext2D, text: string, opti
 
         ctx.font = `${fontSize}px ${parameters.font}`;
 
-        let x = parameters.rect.x;
         let y = parameters.rect.y + fontSize;
         let currentLine = '';
 
@@ -70,7 +69,7 @@ export const drawText = async (ctx: CanvasRenderingContext2D, text: string, opti
 
             if (ctx.measureText(line).width > parameters.rect.width) {
                 /* --- push without the last word ---*/
-                inner.push({ text: currentLine, x, y });
+                inner.push({ text: currentLine, x: parameters.rect.x, y });
                 /* --- start a new line with the word that didnt fit --- */
                 currentLine = word + ' ';
                 y += lineHeight;
@@ -80,7 +79,7 @@ export const drawText = async (ctx: CanvasRenderingContext2D, text: string, opti
         }
 
         /* --- finally push the last words --- */
-        inner.push({ text: currentLine, x, y });
+        inner.push({ text: currentLine, x: parameters.rect.x, y });
 
         /* --- if im at the bottom, thats the max font i can use --- */
         if ((y + (fontSize * parameters.lineHeight)) > parameters.rect.height) {
