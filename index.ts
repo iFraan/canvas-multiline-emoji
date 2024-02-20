@@ -65,13 +65,13 @@ export const drawText = async (ctx: CanvasRenderingContext2D, text: string, opti
         const inner: Line[] = [];
 
         for (const word of words) {
-            const line = `${currentLine} ${word} `;
+            const line = [currentLine, word].filter(Boolean).join(' ');
 
             if (ctx.measureText(line).width > parameters.rect.width) {
                 /* --- push without the last word ---*/
                 inner.push({ text: currentLine, x: parameters.rect.x, y });
                 /* --- start a new line with the word that didnt fit --- */
-                currentLine = word + ' ';
+                currentLine = word;
                 y += lineHeight;
             } else {
                 currentLine = line;
