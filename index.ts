@@ -82,7 +82,7 @@ export const drawText = async (ctx: CanvasRenderingContext2D, text: string, opti
         inner.push({ text: currentLine, x: parameters.rect.x, y });
 
         /* --- if im at the bottom, thats the max font i can use --- */
-        if ((y + (fontSize * parameters.lineHeight)) > parameters.rect.height) {
+        if (((y + (fontSize * parameters.lineHeight)) > parameters.rect.height) || parameters.maxFontSize <= fontSize) {
             lines.push(...inner);
             break;
         }
