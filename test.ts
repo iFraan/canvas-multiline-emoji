@@ -10,8 +10,8 @@ const options = {
     rect: {
         x: 50,
         y: 50,
-        width: canvas.width - 50,
-        height: canvas.height - 50,
+        width: canvas.width - (50 * 2),
+        height: canvas.height - (50 * 2),
     },
 };
 
